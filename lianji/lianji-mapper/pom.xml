@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.linaji</groupId>
+        <groupId>com.lianji</groupId>
         <artifactId>lianji</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -18,11 +18,23 @@
     </properties>
 
     <dependencies>
+        <!-- 依赖 pojo 模块 -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>com.lianji</groupId>
+            <artifactId>lianji-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--依赖service模块-->
+        <dependency>
+            <groupId>com.lianji</groupId>
+            <artifactId>lianji-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>

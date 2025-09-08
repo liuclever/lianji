@@ -1,0 +1,52 @@
+# ===================================================================
+# 服务器配置
+# ===================================================================
+server:
+  port: 8080 # 应用监听的端口
+
+# ===================================================================
+# Spring Boot 基础配置
+# ===================================================================
+spring:
+  application:
+    name: lianji-application # 为您的应用起一个名字
+
+  # ===================================================================
+  # 数据库数据源配置 (核心部分)
+  # ===================================================================
+  datasource:
+    # 数据库驱动，MySQL 8.x 及以上版本使用这个
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接 URL
+    # !! 请务必将 your_database_name 替换为您自己的数据库名 !!
+    # !! 如果数据库不在本地，请将 localhost:3306 替换为正确的地址和端口 !!
+    url: jdbc:mysql://localhost:3306/lianji?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    # 数据库用户名
+    username: root
+    # 数据库密码
+    password: 123456789
+
+# ===================================================================
+# MyBatis-Plus 配置
+# ===================================================================
+mybatis-plus:
+  # Mapper XML 文件的位置
+  mapper-locations: classpath*:/mapper/**/*.xml
+  # 在控制台打印执行的 SQL，便于开发和调试
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 全局配置
+  global-config:
+    db-config:
+      # 主键策略
+      id-type: AUTO
+
+
+# ===================================================================
+# JWT 相关配置
+# ===================================================================
+jwt:
+  # 用于签名的密钥，必须是一个长且复杂的字符串
+  secret: "bXktc3VwZXItc2VjcmV0LWtleS1mb3Itand0LXNlY3JldC1rZXktZm9yLWp3dC1zZWNyZXQta2V5Cg=="
+  # Token 的过期时间（单位：毫ror秒），这里是 7 天
+  expiration: 604800000

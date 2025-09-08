@@ -3,9 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.linaji</groupId>
+    <groupId>com.lianji</groupId>
     <artifactId>lianji</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <packaging>pom</packaging>
     <modules>
         <module>lianji-common</module>
@@ -23,10 +24,11 @@
         <spring-boot.version>2.6.13</spring-boot.version>
         <mybatis-plus.version>3.5.2</mybatis-plus.version>
         <mysql.version>8.0.30</mysql.version>
+        <jjwt.version>0.11.5</jjwt.version>
+        <cn.hutool.version>5.8.20</cn.hutool.version>
+
 
     </properties>
-
-
     <dependencyManagement>
         <dependencies>
             <!--boot依赖-->
@@ -42,7 +44,7 @@
             <dependency>
                     <groupId>com.baomidou</groupId>
                     <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus.version}</version>
+                    <version>${mybatis-plus.version}</version>
             </dependency>
 
             <!--mysql依赖-->
@@ -51,6 +53,31 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+
+            <!-- 在这里添加 jjwt 的依赖管理 -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <!-- 6. Hutool (可选但强烈推荐) -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${cn.hutool.version}</version>
+
+            </dependency>
+
 
 
 

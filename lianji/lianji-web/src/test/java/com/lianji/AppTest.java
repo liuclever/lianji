@@ -1,4 +1,4 @@
-package com.linaji;
+package com.lianji;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

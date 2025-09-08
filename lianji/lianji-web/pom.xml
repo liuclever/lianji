@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.linaji</groupId>
+        <groupId>com.lianji</groupId>
         <artifactId>lianji</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -19,7 +19,13 @@
 
 
     <dependencies>
-        <!-- 引入 Security Starter，因为它负责保护 Web 接口 -->
+        <!-- Spring Boot Web Starter, 它包含了 Web 功能 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Security Starter, 它提供了加密工具和安全框架 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -32,11 +38,36 @@
         </dependency>
 
         <!-- web 模块需要调用 service 模块的业务逻辑 -->
+
         <dependency>
-            <groupId>com.linaji</groupId>
-            <artifactId>lianji-service</artifactId>
+            <groupId>com.lianji</groupId>
+            <artifactId>lianji-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.lianji</groupId>
+            <artifactId>lianji-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.lianji</groupId>
+            <artifactId>lianji-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
 
     </dependencies>
 </project>

@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.linaji</groupId>
+        <groupId>com.lianji</groupId>
         <artifactId>lianji</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -21,6 +21,12 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-annotation</artifactId>
+            <version>3.5.12</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
